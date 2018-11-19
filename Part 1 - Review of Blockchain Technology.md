@@ -52,14 +52,22 @@
 
 ### Public
 
-- Anyone is allowed to join as a trust-less participant, they recieve a wallet that does not contain any personal information and allows them to be pseudonymous in the network.
-- Anyone can read and write data from/to the blockchain
+- Anyone is allowed to join as a trust-less participant, they recieve a wallet that does not contain any personal information and allows them to be pseudonymous in the network. Addresses of participants are publicly viewable, but addresses not necessarily linked to any person or identity.
+- Anyone can read and write data from/to the blockchain, participants not vetted - permisionless. 
 - Transaction processors must invest financially to prevent fraud with Proof of Work or a direct incentive (i.e. cryptocurrency)
-- Each transaction has a cost
+- Costs digital currency to process transactions (e.g. Ether, Bitcoin) 
+- Censorship resistant - anyone can observe, record, and submit txns
+- Examples: public Ethereum and Bitcoin networks
 
-### Private
+### Consortium (or shared, permissioned chains)
 
-- Only verified participants are allowed, bad actors can be punished.
-- Typically seen in enterprise or development enviroments.
-- Validators are legally accountable and are incentivized by reputational risks
-- Small number of nodes can ultimately change the state of data
+- Only verified participants are allowed to participate - block validator identities known,  allowing participants to punish bad actors. 
+- Enables different consensus mechanisms.
+- Can achieve higher transaction throughput compared to public networks.
+
+### Private (or permissioned chains / sandboxes)
+
+- Designed for rapid application development, instant deployment, and single-enterprise deployment solutions.
+- Prototyping and development needs for learning.
+- Participants are known and trusted - Validators are legally accountable and are incentivized by reputational risks
+- Potential for a small number of nodes with ability to change data
