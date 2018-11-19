@@ -69,5 +69,5 @@
 
 - Designed for rapid application development, instant deployment, and single-enterprise deployment solutions.
 - Prototyping and development needs for learning.
-- Participants are known and trusted - Validators are legally accountable and are incentivized by reputational risks
+- All participants are known and trusted - Validators are legally accountable and are incentivized by reputational risks
 - Potential for a small number of nodes with ability to change data
