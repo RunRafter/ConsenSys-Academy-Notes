@@ -38,13 +38,15 @@
 ## Mining
 
 - In the Proof-of-Work consensus scheme, mining is the process of validating transaction blocks through hashing the block contents. This process makes it incredibly difficult to guess the correct answer but very easy to verify the correct guess has been made.
-- Each time a node wins the block they suggest the next state of the system and broadcast their solution to the network. Other nodes verify that the solution is correct and update their ledgers such that the validator recieves the block reward.
-- The difficulty is adjusted based on how quickly the previous block was mined.
-- Each block contains a list of transactions, the hash of the most recent block, nonce, and block reward.
+- Each time a node wins the block they suggest the next state of the system and broadcast their solution to the network. Other nodes verify that the solution is correct and update their ledgers such that the validator recieves the block reward (appends to their local copy of ledger).
+- The difficulty is adjusted based on how quickly the previous block was mined (how quickly people have been winning the guessing game on average over the previous interval).
+- Each block (aka. answer to the Guessing Game) contains a list of transactions (updates to the system), the hash of the most recent block (guessing game answer), nonce (random number used once), and block reward.
 - The ethereum proof-of-work algorithm abides by three main rules:
   1.  Rejects invalid blocks
   2.  Requires proof of work to contain a hash less than the target block #
   3.  Longest chain is always considered to be the most up-to-date/ trusted
+
+  ![EthereumMining](/images/ethMining.png)
 
 ## Public Vs Private Blockchains
 

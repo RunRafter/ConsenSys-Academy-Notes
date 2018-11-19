@@ -1,30 +1,35 @@
 ## Cryptographic Hash Functions
 
-- A hash function is designed to take input data of any size and generate an output of fixed size that cannot be reversed such that the original input is revealed. It should also be noted that the hashing function can be run many times against the same input and always create the same output.
+- A hash function is designed to take input data of any size and generate an output of fixed size (called a hash). This process is called hashing. Hashing makes it so that it cannot be reversed such that the original input is revealed. It should also be noted that the hashing function can be run many times against the same input and always create the same output. Slightly similar inputs should produce very different outputs.
 - Hash functions are:
-  1.  Fast
-  2.  Deterministic
-  3.  Infeasible to reverse
-  4.  Uni-driectional
-  5.  Collision resistant
+  1.  Fast - hashing 1 bit vs 1 GB should not take much more time
+  2.  Deterministic - providing same input to hash fcn will always produce same output
+  3.  Infeasible to reverse - cannot compute data that was input into hash function given the result (one-way function)
+  4.  Small change in input results in very different output - apparent randomness
+  5.  Collision resistant - infeasible to find 2 input with same output
 
 ### Applications of Hash Functions
 
-- Verify data integrity (i.e. checksums, password hashing)
+- Verify data integrity (i.e. checksums - checking file hash against established hash proves data hasn't been tampered with, password hashing - using hashes to verify passwords - should store passwords in hashes)
 
   - Any permutation to the original data will produce an completely different output hash
 
 - Proof of Work
 
-  - Used as a mechanism for preventing service abuse
-  - Hard to find a given hash
-  - Easy to verify that work has been done
+  - Used as a mechanism for preventing service abuse by requiring requestor to put in computationally expensive work
+  - Hard to find a given hash (hash within given threshold)
+  - Easy to verify that work has been done (hash within that threshold)
   - Reduce spam, each transaction incurs a cost which makes it infeasible for spamming.
 
-- Data Verification
+- Data Identification
   - Hash tables
-  - P2P Networks
-  - Pseudorandom number generator
+  - P2P Data Sharing Networks - easy for user to determine identifier associated with any data: hash
+  - Pseudorandom number - not truly random: deterministic and depend on input
+
+  [Blockchain Underpinnings: Hashing by ConsenSys Media](https://medium.com/@ConsenSys/blockchain-underpinnings-hashing-7f4746cbd66b "Blockchain Underpinnings: Hashing by ConsenSys Media")
+  [Cryptographic hash functions on Wikipedia](https://simple.wikipedia.org/wiki/Cryptographic_hash_function "Cryptographic hash functions on Wikipedia")
+  [Cryptographic hash functions by the Kahn Academy](https://simple.wikipedia.org/wiki/Cryptographic_hash_function "Cryptographic hash functions by the Kahn Academy")
+  [Hashing Algorithms and Security - Computerphile](https://www.youtube.com/watch?v=b4b8ktEV4Bg "Hashing Algorithms and Security - Computerphile Video")
 
 ### Public Key Cryptography
 
