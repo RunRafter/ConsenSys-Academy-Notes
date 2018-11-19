@@ -45,6 +45,8 @@
   1.  Rejects invalid blocks
   2.  Requires proof of work to contain a hash less than the target block #
   3.  Longest chain is always considered to be the most up-to-date/ trusted
+  
+  ![EthereumMining](/images/ethMining.png)
 
 ## Public Vs Private Blockchains
 
