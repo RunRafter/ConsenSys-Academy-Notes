@@ -26,10 +26,11 @@
   - P2P Data Sharing Networks - easy for user to determine identifier associated with any data: hash
   - Pseudorandom number - not truly random: deterministic and depend on input
 
-  [Blockchain Underpinnings: Hashing by ConsenSys Media](https://medium.com/@ConsenSys/blockchain-underpinnings-hashing-7f4746cbd66b "Blockchain Underpinnings: Hashing by ConsenSys Media")
-  [Cryptographic hash functions on Wikipedia](https://simple.wikipedia.org/wiki/Cryptographic_hash_function "Cryptographic hash functions on Wikipedia")
-  [Cryptographic hash functions by the Kahn Academy](https://simple.wikipedia.org/wiki/Cryptographic_hash_function "Cryptographic hash functions by the Kahn Academy")
-  [Hashing Algorithms and Security - Computerphile](https://www.youtube.com/watch?v=b4b8ktEV4Bg "Hashing Algorithms and Security - Computerphile Video")
+### Resources
+- [Blockchain Underpinnings: Hashing by ConsenSys Media](https://medium.com/@ConsenSys/blockchain-underpinnings-hashing-7f4746cbd66b "Blockchain Underpinnings: Hashing by ConsenSys Media")
+- [Cryptographic hash functions on Wikipedia](https://simple.wikipedia.org/wiki/Cryptographic_hash_function "Cryptographic hash functions on Wikipedia")
+- [Cryptographic hash functions by the Kahn Academy](https://simple.wikipedia.org/wiki/Cryptographic_hash_function "Cryptographic hash functions by the Kahn Academy")
+- [Hashing Algorithms and Security - Computerphile](https://www.youtube.com/watch?v=b4b8ktEV4Bg "Hashing Algorithms and Security - Computerphile Video")
 
 ### Public Key Cryptography
 
