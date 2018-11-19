@@ -1,35 +1,39 @@
 ## Definitions
-- A ledger is distributed when it has been
-securely replicated across geographic
-locations. Some features of DLT include:
+- A ledger is distributed when it has been securely replicated across geographic locations. Some features of DLT include:
 1. Consensus formation
 2. Peer-to-peer protocols
 3. Cryptographic infrastructure
 
-- A blockchain is one type of distributed
-ledger, which uses blocks as the security
-mechanism for maintaining shared
-information and state
+- A blockchain is one type of distributed ledger, which uses blocks as the security mechanism for maintaining shared information and state
 
 ## Consensus Mechanisms
 
-- Economic mechanism that facilitates the agreement
-process among participants to guarantee data consistency
+- Economic mechanism that facilitates the agreement process among participants to guarantee data consistency.
 - Distributed Ledger Technologies use a variety of consensus mechanisms that allow nodes within a given network to share and agree upon state.
 - By design consensus mechanisms provide an economic incentive to honest participation within a network.
-- Each mechanism includes rules to determine what is a valid block
+- Each mechanism includes rules to determine what is a valid block.
 - Some examples of Consensus Mechanisms include:
 
 1.  Practical Byzantine Fault Tolerance
     - Guarentees that consensus can be reached within a network even if a minority of nodes are dishonest or absent.
+    - Tolerates 1/3 dishonest or absent participants. 
+    - A functioning network with 1 out of 4 faulty nodes is byzantine fault tolerant.
 2.  Proof of Work
-    - Particpants only accept valid block when blockhash is less than target number
+    - Particpants only accept valid block when blockhash is less than target number (difficulty).
     - Miners in a network repeatedly hash the block contents and check the output to see if it matches some specific criteria.
     - When the correct block hash is found it is broadcasted throughout the entire network and the miner is awarded.
+    - Block includes cryptocurrency reward for miner.
     - Blocks are mined a deterministic rate (every 15 seconds in the Ethereum Network)
+    - POW is computationally expensive - high energy use.
+    - Restricted to low txn volume - block times can't be too short (public blockchains where anyone can spin up a node, to allow more ppl to participate limits hardware requirements for nodes).
+    - With unknown parties, doesn't make sense to use disincentives system that can increase efficiency.
 3.  Proof of Stake
     - Currency holders stake some amount of the currency for the chance to validate a block.
     - The block validator is randomly selected by the network but the chance of selection is proportional to the stake.
+    - Participiants will only accept block from validator that is chosen for that period. 
+    - Favours large stake holders. Typically higher txn volume than POW.
+    - Leased POS: Token holders can lease balances to others. Rewards split among leasers.
+    - Delegated POS: Balance holders elect block validators. No sharing of block rewards. Incentivizes validators to maintain good behaviour.
 
 ## Mining
 
