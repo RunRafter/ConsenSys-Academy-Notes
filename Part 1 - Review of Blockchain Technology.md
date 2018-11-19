@@ -1,7 +1,23 @@
+## Definitions
+- A ledger is distributed when it has been
+securely replicated across geographic
+locations. Some features of DLT include:
+1. Consensus formation
+2. Peer-to-peer protocols
+3. Cryptographic infrastructure
+
+- A blockchain is one type of distributed
+ledger, which uses blocks as the security
+mechanism for maintaining shared
+information and state
+
 ## Consensus Mechanisms
 
+- Economic mechanism that facilitates the agreement
+process among participants to guarantee data consistency
 - Distributed Ledger Technologies use a variety of consensus mechanisms that allow nodes within a given network to share and agree upon state.
 - By design consensus mechanisms provide an economic incentive to honest participation within a network.
+- Each mechanism includes rules to determine what is a valid block
 - Some examples of Consensus Mechanisms include:
 
 1.  Practical Byzantine Fault Tolerance
