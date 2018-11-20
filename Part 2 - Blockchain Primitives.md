@@ -71,11 +71,23 @@
 
 ### In-Depth
 
-- A Merkle tree consists of chunks of data, the root hash, and the branch consisting of all hashes going up along the path from the chunk of the root.
+- A Merkle proof consists of a chunk, the root hash of the tree, and the "branch" consisting of all of the hashes going up along the path from the chunk to the root. Someone reading the proof can verify that the hashing, at least for that branch, is consistent going all the way up the tree, and therefore that the given chunk actually is at that position in the tree.
+
+- The application is simple: suppose that there is a large database, and that the entire contents of the database are stored in a Merkle tree where the root of the Merkle tree is publicly known and trusted (eg. it was digitally signed by enough trusted parties, or there is a lot of proof of work on it). Then, a user who wants to do a key-value lookup on the database (eg. "tell me the object in position 85273") can ask for a Merkle proof, and upon receiving the proof verify that it is correct, and therefore that the value received actually is at position 85273 in the database with that particular root.
+
+- It allows a mechanism for authenticating a small amount of data, like a hash, to be extended to also authenticate large databases of potentially unbounded size.
 
 * If we want to verify a transaction we simply take the hash of that node as well as its adjacent node, this would be repeated until the root is reached. If the root hash is different from that which was derived, then the transaction has been tampered with. ![MerkleTree-Verification](/images//merkletree-verification.png)
 
-- Bitcoin uses Merkle trees but they do not contain enough information to provide light clients knowledge about the current state (eg. digital asset holdings, name registrations, the status of financial contracts, etc). To get this information a light client would have to authenticate every single transaction in the chain.
+- Bitcoin uses Merkle trees for "simplified payment verification": instead of downloading every transaction and every block, a "light client" can only download the chain of block headers, 80-byte chunks of data for each block that contain only five things: 
+  - A hash of the previous header
+  - A timestamp
+  - A mining difficulty value
+  - A proof of work nonce
+  - A root hash for the Merkle tree containing the transactions for that block.
+- If the light client wants to determine the status of a transaction, it can simply ask for a Merkle proof showing that a particular transaction is in one of the Merkle trees whose root is in a block header for the main chain.
+
+- While they can prove the inclusion of transactions, they cannot prove anything about the current state (eg. digital asset holdings, name registrations, the status of financial contracts, etc). To get this information a light client would have to authenticate every single transaction in the chain.
   ![BitcoinMerkleTree](/images/bitcoinMerkleTree.jpg)
 
 * Ethereum gets around this limitation by providing three tyoes if trees for three object types (Transactions, Receipts, State) which provides the light client with far more information.
