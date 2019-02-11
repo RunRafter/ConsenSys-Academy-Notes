@@ -3,10 +3,19 @@
 - It is important to know whether using a DApp is a good option for given project.
 
 - A DApp is a good choice if the project requires the following:
-  - The system defines digital relationships
-  - Application needs to by dynamic and auditable
+  - The system defines digital relationships between users
+    - If so, account management offered by Ethereum might be appropriate
+  - Application data needs to by dynamic and auditable
+    - Need to be a record of changes to data set?
+    - Blockchains record and store every update to state of the system
   - Central authority is not a requirement
+    - Data that cannot be trusted in hands of a central authority might benefit from decentralized nature of blockchain integrity verification
+    - integrity maintained by publicly broadcasting + verifying every txn
+    - If transaction privacy is important, using centralized service better
   - Transaction speed is not of vital importance
+    - Can take several block confirmations for txn to be accepted by some application
+    
+- Ethereum app developers build static front end pages that connect to ETH node/gateway. Through ETH gateway, users interact with smart contracts to read or change state of blockchain. ETH gateway relays info from ETH network to web app, showing state of network to user. Gateway also allows users to broadcast txns to network, which user initiates via web interface.
 
 ## Development Enviroment Setup
 
