@@ -167,13 +167,18 @@
 
 - A blockchain fork is when a block splits into two concurrent chains.
   - This can be either intentional such as the case when network nodes are performing software updates or unintentional in the case where miners produce are competing for Proof-of-Work verification.
-    - In the case of unintentional forks caused by miners this is typically caused by two miners discovering the correct block hash and broadcast it to the network simultaneously. The result is that other nodes may recieve notification from one of the miners quicker than the other resulting in two different histories and thus two different chains. As part of the protocol the longest chain is considered the "valid chain", at some point one of the chains will outgrow the other. As a general rule, users should wait for 6 block confirmations because it is almost guarenteed that the longest chain will be identified by that point.
+    - In the case of unintentional forks caused by miners this is typically caused by two miners discovering the correct block hash at same time and broadcast it to the network simultaneously. The result is that other nodes may recieve notification from one of the miners quicker than the other resulting in two different histories and thus two different chains. As part of the protocol the longest chain is considered the "valid chain", at some point one of the chains will outgrow the other. As a general rule, users should wait for 6 block confirmations because it is almost guarenteed that the longest chain will be identified by that point.
   - Forks also occur when there is disagreement between communities in the same blockchain network. If one group implements new rules while another does not the group will split into two sepereate blockchains.
     - Hard Forks
-      - This happens if the upgrade causes nodes to reject blocks verified with nodes using the older version of software. To prevent this nodes must simaltanously upgrade to the new software version.
+      - This happens if the upgrade causes nodes to reject blocks verified with nodes using the older version of software. To prevent this, nodes must simaltanously upgrade to the new software version to continue to accept and generate blocks on new chain. (New chain incompatible with old chain).
       - Hard forks are generally used when there is consensus about software changes being made.
+      - If there's no consensus about the change, blockchain may fork. Forking blockchain can reduce security of system - each branch of fork will have smaller community working to support security of system.
     - Soft Forks
       - Blocks verified by nodes running older software are compatiable with nodes running latest version of software. Both rulesets exist on the same chain.
+      - The change is backward compatible with old chain.
+      - New block rules are more strict and follow subset of old block rules. Co-exist on same chain.
+      - Miners can choose to adopt the change, and if 51% of network adopts new rules, old rules will no longer be accepted and the changes will be adopted by the network.
+      - Used for smaller network changes
 
 ### Resources
 
